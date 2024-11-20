@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./app
+    volumes:
+      - ./app:/app
+    depends_on:
+      - db
+      - broker
+    ports:
+      - "9000:8000"
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: exampleuser
+      POSTGRES_PASSWORD: examplepass
+      POSTGRES_DB: exampledb
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  broker:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  db_data:
