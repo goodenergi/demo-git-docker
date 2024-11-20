@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
 import pika
-
 app = FastAPI()
 
 # Legg til CORS-middleware for å håndtere OPTIONS forespørsler
