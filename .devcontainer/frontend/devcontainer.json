@@ -1,0 +1,31 @@
+{
+    "name": "Custom Monorepo Development - Frontend",
+    "dockerComposeFile": ["../../docker-compose.yml"],
+    "service": "frontend",
+    "workspaceFolder": "/usr/share/nginx/html",
+    "shutdownAction": "none",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "ms-azuretools.vscode-docker",
+          "ms-vscode-remote.remote-containers",
+          "ms-vscode-remote.remote-ssh",
+          "ms-vscode-remote.vscode-remote-extensionpack",
+          "ms-toolsai.jupyter",
+          "ritwickdey.liveserver",
+          "visualstudioexptteam.vscodeintellicode",
+          "vscode-icons-team.vscode-icons",
+          "github.copilot",
+          "github.vscode-pull-request-github",
+          "ms-vsliveshare.vsliveshare"
+        ],
+        "settings": {
+          "editor.formatOnSave": true,
+          "eslint.format.enable": true,
+          "prettier.requireConfig": true
+        }
+      }
+    }
+  }

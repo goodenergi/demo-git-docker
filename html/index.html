@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Velkommen</title>
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
+</head>
+<body>
+    <h1>Hei, Verden!</h1>
+    <button hx-get="http://localhost:9000/db" hx-target="#db-result">Test Database</button>
+    <div id="db-result"></div>
+    <button hx-get="http://localhost:9000/mq" hx-target="#mq-result">Test RabbitMQ</button>
+    <div id="mq-result"></div>
+</body>
+</html>
