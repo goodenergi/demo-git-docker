@@ -16,7 +16,7 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"message": "Hei, im feeling good B!"}
+    return {"message": "Hei, im feeling good A!"}
 
 @app.get("/db")
 def db_test():
