@@ -17,7 +17,7 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"message": "Hei fra FastAPI!"}
+    return {"message": "Hei, im feeling good!"}
 
 @app.get("/db")
 def db_test():
